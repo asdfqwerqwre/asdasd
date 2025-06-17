@@ -1,4 +1,4 @@
-#a
+#b
 from tkinter import *
 import time
 import subprocess
@@ -17,7 +17,7 @@ def logkayit(farm,mesaj):
     print(farm,mesaj)
 def click(btn,x,y):
     if not stop:
-        pyautogui.click(x,y)
+        pyautogui.click(btn,x,y)
     else:
         terminate(btn)
 def ara(imagename):
@@ -334,16 +334,16 @@ def hesapgiris(btn):
             #stop
    
     click(btn,160, 375)
-def liman():
+def liman(btn):
 
     giris = ara("./images/giris.png")
     if giris != -1:
-        click(165, 250)
+        click(btn,165, 250)
         time.sleep(bekleme_carpani*1)
-        click(160, 380)
+        click(btn,160, 380)
     else:
         return "appopen"
-def ickaynakbonusu():
+def ickaynakbonusu(btn):
     girildi = ara("./images/girildi")
     if girildi == -1:
         return "appopen"
@@ -362,72 +362,72 @@ def ickaynakbonusu():
     pyautogui.dragTo(160,280,2)
     time.sleep(bekleme_carpani * 2)
     
-    click(265, 400)
+    click(btn,265, 400)
     time.sleep(bekleme_carpani * 2)
    
     
     sehir = ara("./images/sehir.png")
     if sehir != -1:
-        click(sehir[0] + 10, sehir[1]+ 10)
+        click(btn,sehir[0] + 10, sehir[1]+ 10)
         time.sleep(bekleme_carpani * 2)
        
         
 
         time.sleep(bekleme_carpani * 2)
         for k in range(4):
-            click(280, 140 +(k*60))
+            click(btn,280, 140 +(k*60))
             time.sleep(bekleme_carpani * 2)
            
             tamam = ara("./images/tamam.png")
             if tamam != -1:
                 
-                click(220, 370)
+                click(btn,220, 370)
                 time.sleep(bekleme_carpani * 2)
                 
             else:
-                click(20,65)
+                click(btn,20,65)
                 time.sleep(bekleme_carpani * 2)
-        click(160, 560)
+        click(btn,160, 560)
         time.sleep(bekleme_carpani * 2)
        
-        click(20,65)
-def mesajtopla():
+        click(btn,20,65)
+def mesajtopla(btn):
     girildi = ara("./images/girildi")
     if girildi == -1:
         return "appopen"
-    click(235,590)
+    click(btn,235,590)
     time.sleep(bekleme_carpani*2)
     
-    click(150,450)
+    click(btn,150,450)
     
     time.sleep(bekleme_carpani*2)
-    click(160,590)
+    click(btn,160,590)
     
     time.sleep(bekleme_carpani*2)
-    click(20,65)
+    click(btn,20,65)
     
     time.sleep(bekleme_carpani*2)
-    click(160,335)
+    click(btn,160,335)
     
     time.sleep(bekleme_carpani*2)
     
     for i in range(8):
         
-        click(160,590)
+        click(btn,160,590)
         
         time.sleep(bekleme_carpani*0.5)
         
 
     
     time.sleep(bekleme_carpani*2)
-    click(20,65)
+    click(btn,20,65)
     
     
     
         
         
     time.sleep(bekleme_carpani*1)
-    click(20,65)
+    click(btn,20,65)
     
     time.sleep(bekleme_carpani*1)
     
@@ -453,38 +453,38 @@ def mesajtopla():
     time.sleep(bekleme_carpani*2)
     pyautogui.hotkey("ctrl", "shift","3")
     time.sleep(bekleme_carpani*10)
-def loncatopla():
+def loncatopla(btn):
     girildi = ara("./images/girildi")
     if girildi == -1:
         return "appopen"
     
-    click(290,590)
+    click(btn,290,590)
     time.sleep(bekleme_carpani*2)
     logkayit(farm,"lonca toplanıyor")
     time.sleep(bekleme_carpani*2)
-    click(160,520)
+    click(btn,160,520)
     
     time.sleep(bekleme_carpani*2)
-    click(160,595)
+    click(btn,160,595)
 
     time.sleep(bekleme_carpani*2)
-    click(20,65)
+    click(btn,20,65)
     time.sleep(bekleme_carpani*2)
-    click(160,300)
+    click(btn,160,300)
     
     
     
         
 
     time.sleep(bekleme_carpani*2)
-    click(160,580)
+    click(btn,160,580)
     
     time.sleep(bekleme_carpani*2)
     
-    click(20,65)
+    click(btn,20,65)
     
     time.sleep(bekleme_carpani*2)
-    click(160,475)
+    click(btn,160,475)
     
 
     time.sleep(bekleme_carpani*2)
@@ -492,11 +492,11 @@ def loncatopla():
     free = ara("./images/free.png")
     time.sleep(bekleme_carpani*2)
     if free != -1:
-        click(free[0] + 10,free[1]+10)
+        click(btn,free[0] + 10,free[1]+10)
     
     
 
-    click(160,100)
+    click(btn,160,100)
     
 
     for i in range(20):
@@ -504,7 +504,7 @@ def loncatopla():
         topla = ara("./images/topla.png")
         time.sleep(bekleme_carpani*2)
         if topla != -1:
-            click(topla[0] + 10,topla[1]+10)
+            click(btn,topla[0] + 10,topla[1]+10)
             time.sleep(bekleme_carpani*2)
             
         else:
@@ -515,10 +515,10 @@ def loncatopla():
     time.sleep(bekleme_carpani*2)
     helpreq = ara("./images/helpreq.png")
     if helpreq != -1:
-        click(helpreq[0] + 10,helpreq[1]+10)
+        click(btn,helpreq[0] + 10,helpreq[1]+10)
         time.sleep(bekleme_carpani*2)
         
-    click(270,100)
+    click(btn,270,100)
   
 
 
@@ -529,7 +529,7 @@ def loncatopla():
         
         time.sleep(bekleme_carpani*2)
         if topla != -1:
-            click(topla[0] + 10,topla[1]+10)
+            click(btn,topla[0] + 10,topla[1]+10)
            
             time.sleep(bekleme_carpani*2)
             
@@ -540,43 +540,43 @@ def loncatopla():
     time.sleep(bekleme_carpani*2)
     help = ara("./images/help.png")
     if help != -1:
-        click(help[0] + 10,help[1]+10)
+        click(btn,help[0] + 10,help[1]+10)
         time.sleep(bekleme_carpani*2)
-        click(20,65)
+        click(btn,20,65)
         time.sleep(bekleme_carpani*2)
     
     else:
-        click(20,65)
+        click(btn,20,65)
         time.sleep(bekleme_carpani*2)
     loncatech_yap = collectdata().get("loncatech_yap")
     if not loncatech_yap:
-        click(20,65)
+        click(btn,20,65)
         time.sleep(bekleme_carpani*2)
-def loncatek():
+def loncatek(btn):
 
     logkayit(farm,"lonca teknolojisi yapiliyor")
     time.sleep(bekleme_carpani*2)
-    click(245,390)
+    click(btn,245,390)
     time.sleep(bekleme_carpani*2)
-    click(160,180)
+    click(btn,160,180)
     for i in range(25):
         tamam = ara("tamam.png")
         time.sleep(bekleme_carpani*2)
         
     
         if tamam != -1:
-            click(240,430)
+            click(btn,240,430)
             time.sleep(bekleme_carpani*2)
-            click(20,65)
+            click(btn,20,65)
             time.sleep(bekleme_carpani*2)
-            click(20,65)
+            click(btn,20,65)
             time.sleep(bekleme_carpani*2)
-            click(20,65)
+            click(btn,20,65)
             break
         else: 
-            click(240,430)
-def hazinetopla():
-    click(10,320)
+            click(btn,240,430)
+def hazinetopla(btn):
+    click(btn,10,320)
     bulundu = False
 
    
@@ -587,7 +587,7 @@ def hazinetopla():
         time.sleep(bekleme_carpani*2)
         
         if hazinehavuzu != -1:
-            click(hazinehavuzu[0] +210,hazinehavuzu[1] +45)
+            click(btn,hazinehavuzu[0] +210,hazinehavuzu[1] +45)
             time.sleep(bekleme_carpani*2)
             break
         else:
@@ -602,7 +602,7 @@ def hazinetopla():
     detaylar = ara("./images/detaylar.png")
     time.sleep(bekleme_carpani*2)
     if detaylar != -1:
-        click(228, 356)
+        click(btn,228, 356)
         bulundu = True
         
         time.sleep(bekleme_carpani*2)
@@ -612,7 +612,7 @@ def hazinetopla():
         if collectdata().get("ganimet_yap") == True:
             pass
         else:
-            click(160, 600)
+            click(btn,160, 600)
             
         
 
@@ -622,22 +622,22 @@ def hazinetopla():
             satin = ara("./images/satin.png")
             time.sleep(bekleme_carpani*2)
             if satin != -1:
-                click(160, 150)
+                click(btn,160, 150)
                 
                 time.sleep(bekleme_carpani*2)
 
-                click(20, 60)
+                click(btn,20, 60)
                 break
             else:
-                click(160, 150)
+                click(btn,160, 150)
                 time.sleep(bekleme_carpani*3)
-def ganimet_karavani():
+def ganimet_karavani(btn):
     girildi = ara("./images/girildi.png")
     if girildi == -1:
         return "appopen"
     
     time.sleep(bekleme_carpani*3)
-    click(10,320)
+    click(btn,10,320)
     time.sleep(bekleme_carpani*3)
 
     for i in range(5):
@@ -645,7 +645,7 @@ def ganimet_karavani():
         time.sleep(bekleme_carpani*3)
         
         if ganimet_karavani != -1:
-            click(ganimet_karavani[0] +210,ganimet_karavani[1] +45)
+            click(btn,ganimet_karavani[0] +210,ganimet_karavani[1] +45)
             time.sleep(bekleme_carpani*3)
             break
         else:
@@ -659,21 +659,21 @@ def ganimet_karavani():
         time.sleep(bekleme_carpani*1)
         if topla != -1:
 
-            click(160,475)
+            click(btn,160,475)
             time.sleep(bekleme_carpani*3)
 
-            click(295,485)
+            click(btn,295,485)
             time.sleep(bekleme_carpani*3)
 
-            click(160,460)
+            click(btn,160,460)
             time.sleep(bekleme_carpani*3)
 
-            click(230,370)
+            click(btn,230,370)
             time.sleep(bekleme_carpani*3)
-            click(20,65)
+            click(btn,20,65)
 
         
-    click(265,585) 
+    click(btn,265,585) 
     time.sleep(bekleme_carpani*2)
     
     
@@ -684,70 +684,70 @@ def ganimet_karavani():
     time.sleep(bekleme_carpani*3)
     if(ganimet_karavani_hata != -1):
         time.sleep(bekleme_carpani*3)
-        click(20,65) 
+        click(btn,20,65) 
         time.sleep(bekleme_carpani*3)
         logkayit(farm,"ganimet karavani hata")
     
       
     elif(ganimet_karavani_gece != -1):
         time.sleep(bekleme_carpani*3)
-        click(20,65) 
+        click(btn,20,65) 
         time.sleep(bekleme_carpani*3)
         logkayit(farm,"ganimet karavani gece")
     
       
     elif hallet != -1:
-        click(hallet[0]+20,hallet[1]+20)
+        click(btn,hallet[0]+20,hallet[1]+20)
         time.sleep(bekleme_carpani*2)
-        click(230,370)
+        click(btn,230,370)
         time.sleep(bekleme_carpani*2)
-        click(20,65) 
+        click(btn,20,65) 
         time.sleep(bekleme_carpani*2)
-        click(20,65) 
+        click(btn,20,65) 
       
     else:
 
-        click(165,590) 
+        click(btn,165,590) 
         time.sleep(bekleme_carpani*3)
         
         ganimet_askervar = ara("ganimet_askervar.png")
         if ganimet_askervar != -1:
 
-            click(65,300) 
+            click(btn,65,300) 
             time.sleep(bekleme_carpani*3)
 
-            click(160,575) 
-            time.sleep(bekleme_carpani*3)
-
-
-
-
-            click(135,300) 
-            time.sleep(bekleme_carpani*3)
-
-            click(160,575) 
+            click(btn,160,575) 
             time.sleep(bekleme_carpani*3)
 
 
 
 
-            click(200,300) 
+            click(btn,135,300) 
             time.sleep(bekleme_carpani*3)
 
-            click(160,460) 
-            time.sleep(bekleme_carpani*3)
-
-            click(265,300) 
-            time.sleep(bekleme_carpani*3)
-
-            click(160,470) 
+            click(btn,160,575) 
             time.sleep(bekleme_carpani*3)
 
 
-            click(270,235) 
+
+
+            click(btn,200,300) 
             time.sleep(bekleme_carpani*3)
 
-            click(255,225) 
+            click(btn,160,460) 
+            time.sleep(bekleme_carpani*3)
+
+            click(btn,265,300) 
+            time.sleep(bekleme_carpani*3)
+
+            click(btn,160,470) 
+            time.sleep(bekleme_carpani*3)
+
+
+            click(btn,270,235) 
+            time.sleep(bekleme_carpani*3)
+
+            click(btn,255,225) 
             time.sleep(bekleme_carpani*3)
 
 
@@ -756,51 +756,51 @@ def ganimet_karavani():
             time.sleep(bekleme_carpani*3)
 
 
-            click(160,590)
+            click(btn,160,590)
             time.sleep(bekleme_carpani*3)
 
-            click(20,65)
+            click(btn,20,65)
             time.sleep(bekleme_carpani*3)
             
         else:
-            click(100,65)
+            click(btn,100,65)
             time.sleep(bekleme_carpani*3)
-            click(20,65)
+            click(btn,20,65)
             
       
 
     logkayit(farm,"ganimet karavani bitti")
     #ganimet_karavani bitis
-def hizlitamponhasat():
-    click(295, 525)
+def hizlitamponhasat(btn):
+    click(btn,295, 525)
     time.sleep(bekleme_carpani*2)
     
     if collectdata.get("hizli_topla"):
-        click(125, 220)
+        click(btn,125, 220)
         time.sleep(bekleme_carpani*2)
-        click(160, 490)
+        click(btn,160, 490)
         time.sleep(bekleme_carpani*2)
     
     if collectdata.get("tampon_hasat"):
-        click(270, 100)
+        click(btn,270, 100)
         time.sleep(bekleme_carpani*2)
-        click(200, 200)
+        click(btn,200, 200)
         time.sleep(bekleme_carpani*2)
-        click(160, 490)
+        click(btn,160, 490)
         time.sleep(bekleme_carpani*2)
     if collectdata.get("hasat_et"):
-        click(55, 100)
+        click(btn,55, 100)
         time.sleep(bekleme_carpani*2)
-        click(160, 490)
+        click(btn,160, 490)
         time.sleep(bekleme_carpani*2)
-    click(160, 600)
-def sonrakidunya():
-    click(160, 600)
+    click(btn,160, 600)
+def sonrakidunya(btn):
+    click(btn,160, 600)
     time.sleep(bekleme_carpani*5)
     girildi_dunya = ara("./images/girildi_dunya.png") 
     if girildi_dunya != -1:
         return "basarili"
-def kaynakgonder():
+def kaynakgonder(btn):
     kacinci = 0
     while kacinci < 4:
                 
@@ -816,11 +816,11 @@ def kaynakgonder():
             return "appopen"
         
         time.sleep(bekleme_carpani*1)
-        click(165, 530)
+        click(btn,165, 530)
         time.sleep(bekleme_carpani*1)
-        click(165, 530)
+        click(btn,165, 530)
         time.sleep(bekleme_carpani*1)
-        click(125, 170)
+        click(btn,125, 170)
 
         
         
@@ -832,7 +832,7 @@ def kaynakgonder():
         
         
         time.sleep(bekleme_carpani*2)
-        click(125, 215)
+        click(btn,125, 215)
         time.sleep(bekleme_carpani*2)
 
         
@@ -841,7 +841,7 @@ def kaynakgonder():
             
             if kaynakyardim != -1:
                 logkayit(farm,"kaynak yardim tiklandi")
-                click(kaynakyardim[0] + 10,kaynakyardim[1] + 10)
+                click(btn,kaynakyardim[0] + 10,kaynakyardim[1] + 10)
                 time.sleep(bekleme_carpani*2)
                 break
             else:
@@ -865,7 +865,7 @@ def kaynakgonder():
         
         time.sleep(bekleme_carpani*2)
         if kaynakyardim != -1:
-            click(kaynakyardim[0] + 10,kaynakyardim[1] + 10)
+            click(btn,kaynakyardim[0] + 10,kaynakyardim[1] + 10)
         time.sleep(bekleme_carpani*2)
 
         yolla = ara("./images/yolla.png")
@@ -881,7 +881,7 @@ def kaynakgonder():
         time.sleep(bekleme_carpani*2)
         pyautogui.dragTo(290,275 + kacinci * 60,1)
         time.sleep(bekleme_carpani*2)
-        click(165, 595)
+        click(btn,165, 595)
         time.sleep(bekleme_carpani*1)
         
         girildi_dunya = ara("./images/girildi_dunya.png")
@@ -905,7 +905,7 @@ def kaynakgonder():
             kacinci += 1
             
             if kacinci == 4:
-                click(20,65)
+                click(btn,20,65)
                 logkayit(farm,"kaynak gonderme bitti")
                 break
             pyautogui.moveTo(115,275 + kacinci * 60)
@@ -913,13 +913,13 @@ def kaynakgonder():
             pyautogui.dragTo(290,275 + kacinci * 60,1)
            
             time.sleep(bekleme_carpani*2)
-            click(165, 595)
+            click(btn,165, 595)
             time.sleep(bekleme_carpani*2)
             girildi_dunya = ara("girildi_dunya.png")
             if girildi_dunya == -1:
-                click(20,65)
+                click(btn,20,65)
                 logkayit(farm,"kaynak gonderme hata")
-def askergonder(hangisi):
+def askergonder(btn,hangisi):
     while True:
  
         girildi_dunya = ara("./images/girildi_dunya.png")
@@ -932,9 +932,9 @@ def askergonder(hangisi):
         senden = False
         
 
-        click(255, 525)
+        click(btn,255, 525)
         time.sleep(bekleme_carpani*1)
-        click(255, 525)
+        click(btn,255, 525)
         time.sleep(bekleme_carpani*2)
 
        
@@ -952,22 +952,22 @@ def askergonder(hangisi):
         time.sleep(bekleme_carpani*2)
         pyautogui.dragTo(120, 445, 1)
         time.sleep(bekleme_carpani*2)
-        click(120*(60+hangisi), 445)
+        click(btn,120*(60+hangisi), 445)
         time.sleep(bekleme_carpani*2)
         
         
         if ilksefer:
             
             for i in range(8):
-                click(40, 525)
+                click(btn,40, 525)
                 time.sleep(bekleme_carpani*0.2)
             for i in range(collectdata().get("kaynakseviye")):
-                click(205, 525)
+                click(btn,205, 525)
                 time.sleep(bekleme_carpani*0.2)
             ilksefer = False
 
         
-        click(165, 585)
+        click(btn,165, 585)
         
         
             
@@ -982,7 +982,7 @@ def askergonder(hangisi):
             return "exit"
         else:
             logkayit(farm,"bugday bulundu")
-            click(160, 320)
+            click(btn,160, 320)
             time.sleep(bekleme_carpani*2)
             pyautogui.dragTo(120,320,1)
 
@@ -994,36 +994,36 @@ def askergonder(hangisi):
             time.sleep(bekleme_carpani*2)
 
             if bonusal:
-                click(140,245)
+                click(btn,140,245)
                 time.sleep(bekleme_carpani * 2)
-                click(240,320)
+                click(btn,240,320)
                 time.sleep(bekleme_carpani * 2)
                 kullan = ara("./images/kullan.png")
                 if kullan != -1:
-                    click(kullan[0]+10,kullan[1]+10)
+                    click(btn,kullan[0]+10,kullan[1]+10)
                     time.sleep(bekleme_carpani * 2)
                     tamam = ara("./images/tamam.png")
                     if tamam != -1:
-                        click(20,65)
+                        click(btn,20,65)
                         time.sleep(bekleme_carpani * 1)
-                        click(20,65)
+                        click(btn,20,65)
                         time.sleep(bekleme_carpani * 1)
-                        click(20,65)
+                        click(btn,20,65)
                         time.sleep(bekleme_carpani * 1)
                     else:
-                        click(20,65)
+                        click(btn,20,65)
                         time.sleep(bekleme_carpani * 1)
-                        click(20,65)
+                        click(btn,20,65)
                         time.sleep(bekleme_carpani * 1)
-                click(135, 320)
+                click(btn,135, 320)
                 time.sleep(bekleme_carpani * 2)
-                click(raid[0] + 20, raid[1] + 20)
+                click(btn,raid[0] + 20, raid[1] + 20)
                 bonusal = False
                 
             else:
             
                 
-                click(raid[0] + 20, raid[1] + 20)
+                click(btn,raid[0] + 20, raid[1] + 20)
                 time.sleep(bekleme_carpani*2)
                 logkayit(farm,"bugday saldiri tiklandi")
                 senden = True
@@ -1046,17 +1046,17 @@ def askergonder(hangisi):
         
         if vip != -1:
             logkayit(farm,"bugday vip 1 hata")
-            click(265, 585)
+            click(btn,265, 585)
             time.sleep(bekleme_carpani*2)
             return "vip"
         elif tamam != -1:
-            click(tamam[0]+20,tamam[1]+20)
+            click(btn,tamam[0]+20,tamam[1]+20)
             logkayit(farm,"bugday tamam 1 hata")
             return "vip"
         elif target == -1:
 
             logkayit(farm,"bugday target 1 hata")
-            click(20, 65)
+            click(btn,20, 65)
             cancel = True
             continue
             
@@ -1072,7 +1072,7 @@ def askergonder(hangisi):
 
         
         
-        click(265, 585)
+        click(btn,265, 585)
         time.sleep(bekleme_carpani*2)
 
         tamam = ara("./images/tamam.png")
@@ -1082,14 +1082,14 @@ def askergonder(hangisi):
         time.sleep(bekleme_carpani*2)
         if tamam != -1:
             logkayit(farm,"bugday tamam 2 hata")
-            click(tamam)
+            click(btn,tamam)
             time.sleep(bekleme_carpani*2)
-            click(20, 65)
+            click(btn,20, 65)
             time.sleep(bekleme_carpani*2)
         elif iptal != -1:
             logkayit(farm,"bugday iptal 2 hata")
             time.sleep(bekleme_carpani*2)
-            click(iptal)
+            click(btn,iptal)
             time.sleep(bekleme_carpani*2)
             cancel = True
             continue
@@ -1101,24 +1101,24 @@ def askergonder(hangisi):
             
             logkayit(farm,"Bugdaya Asker Gonderildi")
             time.sleep(bekleme_carpani*1)    
-def sonrakihesap():
+def sonrakihesap(btn):
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
-    click(20,75)
+    click(btn,20,75)
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
-    click(290,585)
+    click(btn,290,585)
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
-    click(50,150)
+    click(btn,50,150)
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
-    click(200,560)
+    click(btn,200,560)
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
-    click(110,227)
+    click(btn,110,227)
     time.sleep(bekleme_carpani*1)
     time.sleep(bekleme_carpani*1)
     
@@ -1147,7 +1147,7 @@ def sonrakihesap():
     pyautogui.write(mail1[1])
     time.sleep(bekleme_carpani*2)
 
-    click(165,320)
+    click(btn,165,320)
     time.sleep(bekleme_carpani*2)
 
     if farm == hesapsayisi -1:
@@ -1159,7 +1159,7 @@ def sonrakihesap():
         pyautogui.write(sifre[farm+1])
         time.sleep(bekleme_carpani*2)
 
-    click(170,390)
+    click(btn,170,390)
     time.sleep(bekleme_carpani*2)
     #stop
 
