@@ -159,7 +159,7 @@ def oyunac():
         for k in harf:
             try:
                 
-                proce = subprocess.Popen(k+":\Program Files\BlueStacks_nxt\HD-Player.exe --instance Pie64 --cmd launchApp --package and.onemt.boe.tr")
+                proce = subprocess.Popen(k+":/Program Files/BlueStacks_nxt/HD-Player.exe --instance Pie64 --cmd launchApp --package and.onemt.boe.tr")
                 break
             
             except:
