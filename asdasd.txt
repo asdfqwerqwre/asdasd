@@ -186,6 +186,7 @@ def oyunac():
 
 def hesapgiris(btn):
     data = collectdata()
+    
     for i in range(200):
         
             
@@ -319,10 +320,10 @@ def hesapgiris(btn):
             
             xtus = ara("./images/xtus.png")
             devredisi = ara("./images/devredisi.png")
-            if devredisi[0] != -1:
+            if devredisi != -1:
                 click(btn,devredisi[0]+10,devredisi[1]+10)
 
-            if xtus[0] != -1:
+            if xtus != -1:
                 click(btn,xtus)
                 
             time.sleep(bekleme_carpani*1)
@@ -526,7 +527,7 @@ def loncatopla():
         topla = ara("./images/topla.png")
         
         time.sleep(bekleme_carpani*2)
-        if topla[0] != -1:
+        if topla != -1:
             click(topla[0] + 10,topla[1]+10)
            
             time.sleep(bekleme_carpani*2)
@@ -558,11 +559,11 @@ def loncatek():
     time.sleep(bekleme_carpani*2)
     click(160,180)
     for i in range(25):
-        tamam = imagesearch.imagesearch("tamam.png")
+        tamam = ara("tamam.png")
         time.sleep(bekleme_carpani*2)
         
     
-        if tamam[0] != -1:
+        if tamam != -1:
             click(240,430)
             time.sleep(bekleme_carpani*2)
             click(20,65)
@@ -642,7 +643,7 @@ def ganimet_karavani():
         ganimet_karavani = ara("./images/ganimet_karavani.png")
         time.sleep(bekleme_carpani*3)
         
-        if ganimet_karavani[0] != -1:
+        if ganimet_karavani != -1:
             click(ganimet_karavani[0] +210,ganimet_karavani[1] +45)
             time.sleep(bekleme_carpani*3)
             break
@@ -653,9 +654,9 @@ def ganimet_karavani():
             time.sleep(bekleme_carpani*3)
 
     for i in range(5):
-        topla = imagesearch.imagesearch("topla-dene.png")
+        topla = ara("topla-dene.png")
         time.sleep(bekleme_carpani*1)
-        if topla[0] != -1:
+        if topla != -1:
 
             click(160,475)
             time.sleep(bekleme_carpani*3)
@@ -708,7 +709,7 @@ def ganimet_karavani():
         click(165,590) 
         time.sleep(bekleme_carpani*3)
         
-        ganimet_askervar = imagesearch.imagesearch("ganimet_askervar.png")
+        ganimet_askervar = ara("ganimet_askervar.png")
         if ganimet_askervar != -1:
 
             click(65,300) 
@@ -837,7 +838,7 @@ def kaynakgonder():
         for i in range(2):
             kaynakyardim = ara("./images/kaynakyardim.png")
             
-            if kaynakyardim[0] != -1:
+            if kaynakyardim != -1:
                 logkayit(farm,"kaynak yardim tiklandi")
                 click(kaynakyardim[0] + 10,kaynakyardim[1] + 10)
                 time.sleep(bekleme_carpani*2)
@@ -913,8 +914,8 @@ def kaynakgonder():
             time.sleep(bekleme_carpani*2)
             click(165, 595)
             time.sleep(bekleme_carpani*2)
-            girildi_dunya = imagesearch.imagesearch("girildi_dunya.png")
-            if girildi_dunya[0] == -1:
+            girildi_dunya = ara("girildi_dunya.png")
+            if girildi_dunya == -1:
                 click(20,65)
                 logkayit(farm,"kaynak gonderme hata")
 def askergonder(hangisi):
@@ -940,7 +941,7 @@ def askergonder(hangisi):
             
         girildi_dunya = ara("./images/girildi_dunya.png")
 
-        if girildi_dunya[0] != -1:
+        if girildi_dunya != -1:
          
             return "appopen"
             
@@ -969,7 +970,7 @@ def askergonder(hangisi):
         
         
             
-        artibir = imagesearch.imagesearch("artibir.png")
+        artibir = ara("artibir.png")
 
         if artibir != -1:
             firstTime = True
@@ -986,7 +987,7 @@ def askergonder(hangisi):
 
        
             
-        raid = imagesearch.imagesearch("raid.png")
+        raid = ara("raid.png")
 
         if raid != -1:
             time.sleep(bekleme_carpani*2)
@@ -1001,7 +1002,7 @@ def askergonder(hangisi):
                     click(kullan[0]+10,kullan[1]+10)
                     time.sleep(bekleme_carpani * 2)
                     tamam = ara("./images/tamam.png")
-                    if tamam[0] != -1:
+                    if tamam != -1:
                         click(20,65)
                         time.sleep(bekleme_carpani * 1)
                         click(20,65)
