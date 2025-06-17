@@ -1,4 +1,4 @@
-#b
+#d
 from tkinter import *
 import time
 import subprocess
@@ -17,7 +17,7 @@ def logkayit(farm,mesaj):
     print(farm,mesaj)
 def click(btn,x,y):
     if not stop:
-        pyautogui.click(btn,x,y)
+        pyautogui.click(x,y)
     else:
         terminate(btn)
 def ara(imagename):
@@ -1219,120 +1219,120 @@ def main(btn,frm):
         if x == "appopen":
             cikis()
             continue
-        x = liman()
+        x = liman(btn)
         if x == "appopen":
             cikis()
             continue
 
         if ic_kaynak_bonus:
-            x = ickaynakbonusu()
+            x = ickaynakbonusu(btn)
             if  x == "appopen":
                 cikis()
                 continue
 
         if mesaj_topla:
-            x = mesajtopla()
+            x = mesajtopla(btn)
             if  x == "appopen":
                 cikis()
                 continue
         if lonca_topla:     
-            x = loncatopla()
+            x = loncatopla(btn)
             if x == "appopen":
                 cikis()
                 continue
 
         if loncatech_yap:
-            x = loncatek()
+            x = loncatek(btn)
             if x == "appopen":
                 cikis()
                 continue
 
         if hazine_topla:
-            x = hazinetopla()
+            x = hazinetopla(btn)
             if x == "appopen":
                 cikis()
                 continue
 
         if ganimet_yap:
-            x = ganimet_karavani()
+            x = ganimet_karavani(btn)
             if  x == "appopen":
                 cikis()
                 continue
 
         if hizli_topla or tampon_hasat or hasat_et:        
-            hizlitamponhasat()
+            hizlitamponhasat(btn)
         
-        sonrakidunya()
+        sonrakidunya(btn)
 
         if kaynak_gonder:
-            x = kaynakgonder()        
+            x = kaynakgonder(btn)        
             if x == "appopen":
                 cikis()
                 continue
             elif x =="vip":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
 
         if bugdaylist[farm]:        
-            x = askergonder(0)
+            x = askergonder(btn,0)
             if x== "appopen":
                 cikis()
                 continue
             elif x == "exit":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
             elif x == "vip":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
 
         if odunlist[farm]:        
-            x = askergonder(1)
+            x = askergonder(btn,1)
             if x== "appopen":
                 cikis()
                 continue
             elif x == "exit":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
             elif x == "vip":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
 
         if demirlist[farm]:        
-            x = askergonder(2)
+            x = askergonder(btn,2)
             if x== "appopen":
                 cikis()
                 continue
             elif x == "exit":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
             elif x == "vip":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
 
         if kuvarslist[farm]:        
-            x = askergonder(3)
+            x = askergonder(btn,3)
             if x== "appopen":
                 cikis()
                 continue
 
             elif x == "exit":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
 
             elif x == "vip":
                 farm += 1
-                sonrakihesap()
+                sonrakihesap(btn)
                 continue
 
-        sonrakihesap()
+        sonrakihesap(btn)
 
         if farm +1 == hesapsayisi:
             farm = 0
