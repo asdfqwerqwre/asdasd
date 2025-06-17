@@ -186,7 +186,6 @@ def oyunac():
 
 def hesapgiris(btn):
     data = collectdata()
-    exit()
     for i in range(200):
         
             
